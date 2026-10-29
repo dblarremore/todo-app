@@ -1,0 +1,22 @@
+# The actual todo list. todo.py recreates an empty one on first run, so a fresh
+# checkout still works — it just starts blank.
+data.json
+data.json.tmp
+
+# Rolling snapshots of the list and the retired markdown mirrors: same personal
+# data, many times over. The one-time markdown importer is code, so keep it.
+backups/*
+!backups/retired/
+backups/retired/*
+!backups/retired/migrate.py
+
+# Dropbox forks a file into "… (conflicted copy 2026-01-01).ext" when two
+# machines write at once; todo.py surfaces these, git should never track them.
+*conflicted copy*
+
+.DS_Store
+
+# Machine-local assistant settings and Python caches.
+.claude/
+__pycache__/
+*.pyc
